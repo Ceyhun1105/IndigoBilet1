@@ -1,0 +1,49 @@
+﻿@model Post
+
+<div class="container">
+
+    <div class="container">
+        <h1 style="text-align:center"> Create Posts</h1>
+    </div>
+    <div>
+
+        <form method="post" asp-action="create" enctype="multipart/form-data">
+
+            <div class="row">
+
+                <div class="form-group col-6">
+                    <label asp-for="Title">Title</label>
+                    <input asp-for="Title" class="form-control" placeholder="Title" />
+                    <span asp-validation-for="Title " class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group col-6">
+                    <label asp-for="LearnMoreurl">LearnMoreurl</label>
+                    <input asp-for="LearnMoreurl" class="form-control" placeholder="LearnMoreurl" />
+                    <span asp-validation-for="LearnMoreurl " class="text-danger"></span>
+                </div>
+
+
+                <div class="form-group col-6">
+                    <label asp-for="Description">Description</label>
+                    <textarea asp-for="Description" class="form-control" placeholder="Description" ></textarea>
+                    <span asp-validation-for="Description " class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-6">
+                    <label asp-for="ImageFile">Image</label>
+                    <input asp-for="ImageFile" class="form-control" placeholder="ImageFile" />
+                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create</button>
+        </form>
+
+
+
+    </div>
+</div>
+
+
